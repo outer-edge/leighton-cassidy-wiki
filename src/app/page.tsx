@@ -433,11 +433,11 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 premium-header">
         <div className="max-w-[1200px] mx-auto px-4">
           <div className="flex items-center justify-between py-3">
-            <div className="cursor-pointer flex items-center gap-3" onClick={() => navigate("home")}>
-              <Monogram />
+            <div className="cursor-pointer flex items-center gap-4" onClick={() => navigate("home")}>
+              <Monogram size="lg" />
               <div className="flex flex-col">
-                <h1 className="font-serif text-xl font-light text-heading tracking-tight" style={{ letterSpacing: '-0.025em' }}>Leighton Cassidy Legal</h1>
-                <span className="hidden sm:inline text-[10px] text-gold uppercase tracking-[0.2em]">Intellectual Property is in our DNA</span>
+                <h1 className="font-serif text-2xl sm:text-3xl font-light text-heading" style={{ letterSpacing: '-0.03em' }}>Leighton Cassidy Legal</h1>
+                <span className="hidden sm:inline text-[11px] text-gold uppercase tracking-[0.2em]">Intellectual Property is in our DNA</span>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -476,7 +476,6 @@ export default function HomePage() {
         {/* HOME */}
         {activeSection === "home" && (
           <div className="fade-in">
-            <Breadcrumbs items={["Main Page"]} />
             <RevealSection>
             <div className="bg-paper content-panel rounded-sm p-8 mb-10 wiki-article">
               <h2 className="font-serif text-2xl text-heading mb-1" style={{ letterSpacing: '-0.02em', fontWeight: 300 }}>We Make Your Intellectual Property Challenges Easier to Manage</h2>
@@ -569,7 +568,7 @@ export default function HomePage() {
           <div className="fade-in">
             {!activePracticeArea ? (
               <>
-                <Breadcrumbs items={["Main Page", "Practice Areas"]} />
+                {/* <Breadcrumbs items={["Main Page", "Practice Areas"]} /> */}
                 <h2 className="font-serif text-2xl text-heading mb-2">Intellectual Property Practice Areas</h2>
                 <p className="text-muted mb-6 max-w-2xl">Our team have decades of experience advising clients across New Zealand, Australia, the United Kingdom, European Union, Ireland, Canada, United States, China, Hong Kong SAR and Japan.</p>
                 <div className="grid sm:grid-cols-2 gap-5">
@@ -594,7 +593,7 @@ export default function HomePage() {
               ];
               return (
                 <>
-                  <Breadcrumbs items={["Main Page", "Practice Areas", pa.title]} />
+                  {/* <Breadcrumbs items={["Main Page", "Practice Areas", pa.title]} /> */}
                   <div className="flex gap-6">
                     <TableOfContents items={tocItems} />
                     <article className="flex-1 wiki-article min-w-0">
@@ -625,7 +624,7 @@ export default function HomePage() {
           <div className="fade-in">
             {!activeDispute ? (
               <>
-                <Breadcrumbs items={["Main Page", "IP Disputes"]} />
+                {/* <Breadcrumbs items={["Main Page", "IP Disputes"]} /> */}
                 <h2 className="font-serif text-2xl text-heading mb-2">IP Dispute Resolution and Litigation</h2>
                 <p className="text-muted mb-4 max-w-2xl">Our team have decades of experience advising clients in relation to their intellectual property dispute resolution and litigation requirements.</p>
                 <p className="text-muted mb-6 max-w-2xl">In addition to our core practice in New Zealand and Australia, we have extensive international experience practising in international jurisdictions including the United Kingdom, European Union and Ireland and working with clients and agents based in those countries. We also have extensive experience in advising clients from many other countries including Canada, United States, China, Hong Kong SAR and Japan.</p>
@@ -653,7 +652,7 @@ export default function HomePage() {
               </>
             ) : activeDispute === "opposition" ? (
               <>
-                <Breadcrumbs items={["Main Page", "IP Disputes", "Opposition, Revocation, Invalidity"]} />
+                {/* <Breadcrumbs items={["Main Page", "IP Disputes", "Opposition, Revocation, Invalidity"]} /> */}
                 <article className="wiki-article max-w-3xl">
                   <h1 className="font-serif text-3xl text-heading mb-1 font-light" style={{ letterSpacing: '-0.025em' }}>Opposition, Revocation, Invalidity Proceedings</h1>
                   <p className="text-sm text-muted italic mb-4">From Leighton Cassidy Legal &mdash; Intellectual Property is in our DNA</p>
@@ -670,7 +669,7 @@ export default function HomePage() {
               </>
             ) : activeDispute === "litigation" ? (
               <>
-                <Breadcrumbs items={["Main Page", "IP Disputes", "Litigation and Appeals"]} />
+                {/* <Breadcrumbs items={["Main Page", "IP Disputes", "Litigation and Appeals"]} /> */}
                 <article className="wiki-article max-w-3xl">
                   <h1 className="font-serif text-3xl text-heading mb-1 font-light" style={{ letterSpacing: '-0.025em' }}>Litigation and Appeals before the Registries and the Courts</h1>
                   <p className="text-sm text-muted italic mb-4">From Leighton Cassidy Legal &mdash; Intellectual Property is in our DNA</p>
@@ -688,7 +687,7 @@ export default function HomePage() {
               </>
             ) : activeDispute === "selected-cases" ? (
               <>
-                <Breadcrumbs items={["Main Page", "IP Disputes", "Selected Cases"]} />
+                {/* <Breadcrumbs items={["Main Page", "IP Disputes", "Selected Cases"]} /> */}
                 <h2 className="font-serif text-2xl text-heading mb-2">Selected Cases</h2>
                 <p className="text-muted mb-4 max-w-2xl text-sm">A selection of reported cases spanning trade mark oppositions, invalidity proceedings, appeals and copyright disputes across multiple jurisdictions.</p>
                 <div className="flex gap-2 mb-5 flex-wrap">
@@ -729,7 +728,7 @@ export default function HomePage() {
           <div className="fade-in">
             {!activeInsight ? (
               <>
-                <Breadcrumbs items={["Main Page", "Insights"]} />
+                {/* <Breadcrumbs items={["Main Page", "Insights"]} /> */}
                 <h2 className="font-serif text-2xl text-heading mb-2">Insights</h2>
                 <p className="text-muted mb-6 max-w-2xl text-sm">Updates on developments in the law, interesting cases and newsworthy stories across industries and relevant sectors.</p>
                 <div className="space-y-5">
@@ -756,7 +755,7 @@ export default function HomePage() {
               const article = insightArticles.find((a) => a.id === activeInsight)!;
               return (
                 <>
-                  <Breadcrumbs items={["Main Page", "Insights", article.title]} />
+                  {/* <Breadcrumbs items={["Main Page", "Insights", article.title]} /> */}
                   <article className="wiki-article max-w-3xl">
                     <h1 className="font-serif text-3xl text-heading mb-1 font-light leading-snug" style={{ letterSpacing: '-0.025em' }}>{article.title}</h1>
                     <div className="flex items-center gap-3 mb-5 text-sm text-muted">
@@ -780,7 +779,7 @@ export default function HomePage() {
         {/* PEOPLE */}
         {activeSection === "people" && (
           <div className="fade-in">
-            <Breadcrumbs items={["Main Page", "About"]} />
+            {/* <Breadcrumbs items={["Main Page", "About"]} /> */}
             <h2 className="font-serif text-2xl text-heading mb-2">About Leighton Cassidy Legal</h2>
             <p className="text-muted mb-6 max-w-2xl">Our team have decades of experience advising clients in relation to their intellectual property and dispute resolution requirements.</p>
             <div className="space-y-8">
@@ -820,7 +819,7 @@ export default function HomePage() {
         {/* CONTACT */}
         {activeSection === "contact" && (
           <div className="fade-in">
-            <Breadcrumbs items={["Main Page", "Contact"]} />
+            {/* <Breadcrumbs items={["Main Page", "Contact"]} /> */}
             <h2 className="font-serif text-2xl text-heading mb-6">Contact</h2>
             <div className="grid lg:grid-cols-2 gap-8">
               <div>
